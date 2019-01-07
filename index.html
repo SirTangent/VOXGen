@@ -14,18 +14,18 @@
     <div class="container">
       <div class="page-header">
         <br>
-        <h1>VOXGen | Black Mesa Announcement System</h1>
+        <h1>VOXGen | Black Mesa Announcement System [WIP | Unstable]</h1>
       </div>
-      <form action="#" class="jumbotron">
+      <form class="jumbotron">
         <div class="form-group">
           <label for="voice">Select VOX Voice:</label>
           <br>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
-              <input type="radio" name="voice" id="voice_hl" value="voice_hl" autocomplete="off" checked>HL1 Original</input>
+              <input type="radio" name="voice" id="vox/" value="vox/" autocomplete="off" checked>HL1 Original</input>
             </label>
             <label class="btn btn-secondary">
-              <input type="radio" name="voice" id="voice_mil" value="voice_mil" autocomplete="off">BM Military</input>
+              <input type="radio" name="voice" id="vox2/" value="vox2/" autocomplete="off">BM Military</input>
             </label>
           </div>
         </div>
@@ -33,7 +33,7 @@
           <label for="text">Enter Sentence:</label>
           <input id="text" type="text" name="text" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Generate</button>
+        <button type="button" class="btn btn-primary" onclick="generateVOX()">Play</button>
       </form>
       <div class="">
         Programmed by <a href="https://wphillips.me/">Wyatt Phillips</a>
@@ -44,5 +44,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.core.min.js" integrity="sha256-boL6w+b+PUpqHKhZVL+oNfjUn4WpXL2MUdOgFTe82fg=" crossorigin="anonymous"></script>
+    <script src="voxgen.js"></script>
   </body>
 </html>
