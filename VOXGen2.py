@@ -30,7 +30,7 @@ for i in sentence:
 
 print(accepted)
 
-splice = ""
+splice = b""
 
 for i in accepted:
     sound = wave.open(SOUND_DIR + i + '.wav')
