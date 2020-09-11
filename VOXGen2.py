@@ -30,7 +30,7 @@ for i in sentence:
 
 print(accepted)
 
-splice = b""
+splice = bytes() # Was previously a string.
 
 for i in accepted:
     sound = wave.open(SOUND_DIR + i + '.wav')
@@ -39,16 +39,16 @@ for i in accepted:
     SOUND_WIDTH = sound.getsampwidth()
     SOUND_CHANNELS = sound.getnchannels()
 
-    splice = splice + (sound.readframes(sound.getnframes()))
+    splice = splice + bytes(sound.readframes(sound.getnframes())) # Bytes conversion
 
     sound.close()
 
 try:
-    out = wave.open('out.wav', 'w')
+    out = wave.open('out.wav', 'wb')
     out.setnchannels(SOUND_CHANNELS)
     out.setsampwidth(SOUND_WIDTH)
     out.setframerate(SOUND_SAMPLE)
-    out.writeframesraw(splice)
+    out.writeframes(splice)
     out.close()
 except:
     print('FATAL: Failed to write to output file.')
